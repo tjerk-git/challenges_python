@@ -18,8 +18,19 @@ def mid(string):
         return ""
 
 
-tester = "abc"
-testert = "aaaa"
-testert3 = "aaaaaaa"
+def online_count(statuses):
+    online_status = []
+    for status in statuses.values():
+        if status == "online":
+            online_status.append(status)
 
-print(mid(testert3))
+    return len(online_status)
+
+
+statuses = {
+    "Alice": "online",
+    "Bob": "offline",
+    "Eve": "online",
+}
+
+print(online_count(statuses))
